@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 
 function isAuthenticated(req, res, next) {
-    try {
+    try { 
         let token = req.get("authorization");
         if (!token){
             return res.status(404).json({ is_valid: false, msg: "Token not found" });
